@@ -1,9 +1,9 @@
 # STAR
-Official implenmentation of SynergisTic pAtch pRuning (STAR)
+Official implementation of SynergisTic pAtch pRuning (STAR)
 ## Usage
 First, clone the repository locally:
 ```
-git clone https://github.com/JuttaZhang/ASTER.git
+[git clone https://github.com/JuttaZhang/ASTER.git](https://github.com/LannWei/STAR.git)
 ```
 Then, install PyTorch == 1.9.1+cu111\\
 prchvision == 0.10.1+cu111 \\
