@@ -18,7 +18,7 @@ from baselines.ViT.layer_helpers import to_2tuple
 import time
 
 
-import sys  #导入sys包
+import sys 
 np.set_printoptions(threshold=sys.maxsize)
 
 
