@@ -1,7 +1,6 @@
 """ Vision Transformer (ViT) in PyTorch
 adapted from https://github.com/hila-chefer/Transformer-Explainability/blob/main/baselines/ViT/ViT_LRP.py
 """
-# lvvit模型
 import torch
 import torch.nn as nn
 from einops import rearrange
