@@ -187,9 +187,6 @@ class Attention(nn.Module):
             keep_rate = self.keep_rate
         blocki = self.blocki
         
-        #print(x[:,1:,:].shape)
-        #print(attn)
-        # torch.save(x[:,1:,:],"/home/yuyao/Heatmap/recordattn/attn{}.pth".format(blocki))
 
         b, n, C, h = *x.shape, self.num_heads
         qkv = self.qkv(x)
