@@ -320,7 +320,7 @@ def main(args):
         #     cutoff=1-args.cutoff_token
         # )
 
-        model = lvvits().cuda() #################################### hello hello这是我的模型呀
+        model = lvvits().cuda()
         print(model)
         from collections import OrderedDict
         new_state_dict = OrderedDict()
@@ -345,7 +345,7 @@ def main(args):
         #     drop_block_rate=None,
         #     token_cfg=None
         # )
-        model = lvvits().cuda() #################################### hello hello这是我的模型呀
+        model = lvvits().cuda() 
 
     teacher_model = None
     if args.distillation_type != 'none':
@@ -436,7 +436,7 @@ def main(args):
         linear_scaled_lr = args.lr * args.batch_size * utils.get_world_size() / 512.0
         args.lr = linear_scaled_lr
         # optimizer = create_optimizer(args, submodel_without_ddp, modelparam=param_groups if args.layer_decay < 1. else None)
-        optimizer = create_optimizer(args, submodel_without_ddp.parameters()) #俺重新写的
+        optimizer = create_optimizer(args, submodel_without_ddp.parameters()) 
         lr_scheduler, _ = create_scheduler(args, optimizer)
 
         criterion = LabelSmoothingCrossEntropy()
@@ -559,7 +559,7 @@ def main(args):
                         token_cfg=token_cfg_tmp,
                         cutoff=1-args.cutoff_token
                     )
-                    # 从model向submodel载入参数
+
                     submodel.to(device)
                     pruner.load_subgraph_from_model(sub_grah=submodel)
 
@@ -593,7 +593,7 @@ def main(args):
                             token_cfg=token_cfg_tmp,
                             cutoff=1-args.cutoff_token
                         )
-                        # 从model向submodel载入参数
+
                         submodel.to(device)
                         pruner.load_subgraph_from_model(sub_grah=submodel)
                         submodel_without_ddp = submodel
@@ -631,7 +631,7 @@ def main(args):
                     else:
                         if args.distributed:
                             dist.barrier()
-                    # 次进程获取submodel结构
+
                     pruner_point = torch.load(pruner_paths, map_location='cpu')
                     pruner = pruner_point['pruner']
                     print('pruner.dim_cfg:\n', pruner.dim_cfg)
@@ -647,7 +647,7 @@ def main(args):
                         token_cfg=token_cfg_tmp,
                         cutoff=1-args.cutoff_token
                     )
-                    # 从model向submodel载入参数
+
                     submodel.to(device)
                     pruner.org_model.to(device)
                     pruner.load_subgraph_from_model(sub_grah=submodel)
@@ -794,7 +794,7 @@ def main(args):
             dim_cfg, i_mask, o_mask = pruner.dim_cfg, pruner.i_mask, pruner.o_mask
             token_pr = (sum(model_without_ddp.num_tokens)-sum(submodel.num_tokens))/sum(model_without_ddp.num_tokens)*100.
 
-            # 从model向submodel载入参数
+
             submodel.to(device)
             pruner.org_model.to(device)
             pruner.load_subgraph_from_model(sub_grah=submodel)
