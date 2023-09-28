@@ -415,7 +415,7 @@ def main(args):
         submodel = model
         submodel_without_ddp = model_without_ddp
 
-        # 设置submodel的优化器
+
         if args.model_ema:
             # Important to create EMA model after cuda(), DP wrapper, and AMP but before SyncBN and DDP wrapper
             model_ema = ModelEma(
