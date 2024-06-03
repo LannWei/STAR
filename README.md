@@ -1,5 +1,8 @@
 # STAR
 The implementation of SynergisTic pAtch pRuning for Vision Transformers.
+
+Developers: Yuyao Zhang and Lan Wei
+
 # This code is the implementation of STAR
 [Synergistic Patch Pruning for ViT: Unifying Intra- \& Inter-Layer Patch Importance]
 
