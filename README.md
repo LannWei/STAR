@@ -4,7 +4,7 @@ The implementation of SynergisTic pAtch pRuning for Vision Transformer.
 Developers: Yuyao Zhang and Lan Wei
 
 # This code is the implementation of STAR
-[Synergistic Patch Pruning for Vision Transformer: Unifying intra- \& inter-Layer patch importance]
+[Synergistic patch pruning for Vision Transformer: Unifying intra- \& inter-layer patch importance]
 
 Authors: Yuyao Zhang, Lan Wei, and Nikolaos M. Freris
 
