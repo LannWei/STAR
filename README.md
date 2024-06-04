@@ -6,7 +6,7 @@ Developers: Yuyao Zhang and Lan Wei
 # This code is the implementation of STAR
 [Synergistic Patch Pruning for ViT: Unifying Intra- \& Inter-Layer Patch Importance]
 
-Author: Yuyao Zhang, Lan Wei, and Nikolaos M. Freris
+Authors: Yuyao Zhang, Lan Wei, and Nikolaos M. Freris
 
 ## Usage
 
